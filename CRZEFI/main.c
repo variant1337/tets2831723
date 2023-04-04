@@ -2,12 +2,12 @@
 #include "dummy.h"
 
 // Defines used to check if call is really coming from client
-#define baseOperation 0x8374
-#define VARIABLE_NAME L"wwwwww1"
-#define COMMAND_MAGIC baseOperation*0x52567
+#define baseOperation 0x8387
+#define VARIABLE_NAME L"ioioioio"
+#define COMMAND_MAGIC baseOperation*0x52598
 
 // Our protocol GUID (should be different for every driver)
-EFI_GUID ProtocolGuid = { 0x1f88681f, 0xd383, 0x21e9, {0x8e, 0x8e, 0x19, 0xa5, 0xa2, 0xa7, 0xb6, 0xd1} };
+EFI_GUID ProtocolGuid = { 0x1f92781f, 0xd273, 0x27d9, {0x8e, 0x8e, 0x19, 0xa5, 0xa2, 0xa7, 0xb6, 0xd1} };
 // VirtualAddressMap GUID (gEfiEventVirtualAddressChangeGuid)
 EFI_GUID VirtualGuid = { 0x13FA7698, 0xC831, 0x49C7, { 0x87, 0xEA, 0x8F, 0x43, 0xFC, 0xC2, 0x51, 0x96 } }; //we will remove later shouldn't be important
 // ExitBootServices GUID (gEfiEventExitBootServicesGuid)
@@ -341,15 +341,7 @@ EFI_STATUS efi_main(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE* SystemTable)
     
     // Print confirmation text
     Print(L"\n");
-    Print(L"       __ _                                  \n");
-    Print(L"  ___ / _(_)___ _ __  ___ _ __  ___ _ _ _  _ \n");
-    Print(L" / -_)  _| |___| '  \\/ -_) '  \\/ _ \\ '_| || |\n");
-    Print(L" \\___|_| |_|   |_|_|_\\___|_|_|_\\___/_|  \\_, |\n");
-    Print(L"                                        |__/ \n");
-    Print(L"Developed and improved by TheCruZ\n");
-    Print(L"Based in efi-memory of Samuel Tulach\n");
-    Print(L"Thanks to: @Mattiwatti (EfiGuard), Roderick W. Smith (rodsbooks.com)\n\n");
-    Print(L"Driver has been loaded successfully. You can now boot to the OS.\n");
+    Print(L"LOADED FANTA EFI\n");
     CHAR16* pos2 = L"If you don't see a blue screen while booting disable Secure Boot!.\n";
     Print(pos2);
     SetMem((ptr64)fstr, ((ptr64)pos2 - (ptr64)fstr) + (68*sizeof(short)), 0);
