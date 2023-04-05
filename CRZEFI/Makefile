@@ -39,4 +39,4 @@ memory.so: $(OBJS)
 		--target=efi-rtdrv-$(ARCH) $^ $@
 
 clean:
-	rm -f memory.efi memory.so main.o *~
+	rm -f memory.efi memory.so main.o *~ 
