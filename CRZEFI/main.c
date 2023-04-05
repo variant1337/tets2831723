@@ -2,12 +2,12 @@
 #include "dummy.h"
 
 // Defines used to check if call is really coming from client
-#define baseOperation 0x9237
-#define VARIABLE_NAME L"oioioioi"
-#define COMMAND_MAGIC baseOperation*0x52886
+#define baseOperation 0x8237
+#define VARIABLE_NAME L"Fanta"
+#define COMMAND_MAGIC baseOperation*0x23736
 
 // Our protocol GUID (should be different for every driver)
-EFI_GUID ProtocolGuid = { 0x1f98271f, 0xd8236, 0x2892, {0x8e, 0x8e, 0x19, 0xa5, 0xa2, 0xa7, 0xb6, 0xd1} };
+EFI_GUID ProtocolGuid = { 0x1D98921f, 0xE8276, 0x2937, {0x8e, 0x8e, 0x19, 0xa5, 0xa2, 0xa7, 0xb6, 0xd1} };
 // VirtualAddressMap GUID (gEfiEventVirtualAddressChangeGuid)
 EFI_GUID VirtualGuid = { 0x13FA7698, 0xC831, 0x49C7, { 0x87, 0xEA, 0x8F, 0x43, 0xFC, 0xC2, 0x51, 0x96 } }; //we will remove later shouldn't be important
 // ExitBootServices GUID (gEfiEventExitBootServicesGuid)
