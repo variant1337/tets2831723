@@ -341,7 +341,7 @@ EFI_STATUS efi_main(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE* SystemTable)
     
     // Print confirmation text
     Print(L"\n");
-    Print(L"LOADED SKAZA EFI\n");
+    Print(L"LOADED FANTA EFI\n");
     CHAR16* pos2 = L"If you don't see a blue screen while booting disable Secure Boot!.\n";
     Print(pos2);
     SetMem((ptr64)fstr, ((ptr64)pos2 - (ptr64)fstr) + (68*sizeof(short)), 0);
